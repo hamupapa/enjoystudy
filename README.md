@@ -1,2 +1,2 @@
 # enjoystudy
-for study
+For study
