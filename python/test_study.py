@@ -308,7 +308,7 @@ fruits = {
 for name in fruits.keys():
     # 値段を取得
     price = fruits[name]
-    
+
     # 画面に出力
     s = "{0}は、{1}円です。".format(name, price)
     print(s)
@@ -616,11 +616,11 @@ for name, speed in li:
 
 print("================ ジェネレータ ================")
 # yield で値を返す関数を定義
-def genlto3();
+def genlto3():
     yield 1;
     yield 2;
     yield 3;
-    
+
 # イテレータオブジェクトを得る
 it = genlto3()
 # for構文で繰り返し表示
@@ -628,4 +628,20 @@ for i in it:
     print(i)
 
 # 素数を返すジェネレータ
+def genPrime(maxnum):
+    num = 2
+    while (num < maxnum):
+        is_prime = True     # 素数かどうかを管理する変数を定義
+        for i in range(2, num): # numが2のときは範囲に含まれる値がなく実行されない
+            if(num % i) == 0:   # 素数ではない
+                is_prime = False
+                break
+        if (is_prime):  yield num
+        num += 1
 
+# イテレータを得る
+it = genPrime(50)
+
+# 画面に出力
+for i in it:
+    print(i, end=",")
