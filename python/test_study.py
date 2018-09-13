@@ -627,4 +627,5 @@ it = genlto3()
 for i in it:
     print(i)
 
+# 素数を返すジェネレータ
 
