@@ -706,5 +706,5 @@ for_func(
 # 辞書型の内容をすべて画面に出力
 ages = {"Taro":20, "Jiro":15, "Saburo":18}
 for_func(
-    ages.item(),            # (キー, 値)のタプルを得る
+    ages.items(),            # (キー, 値)のタプルを得る
     lambda n : print(n))    # 繰り返す処理
