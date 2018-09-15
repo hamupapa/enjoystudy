@@ -14,5 +14,5 @@ print(s2cm(10))
 
 import random, datetime, json
 
-from syaku import syaku, test1, test2
-from syaku import syaku as s, test1 as t1, test2
+from syaku import syaku_to_cm, test1, test2
+from syaku import syaku_to_cm as s2c, test1 as t1, test2
