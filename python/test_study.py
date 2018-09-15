@@ -653,8 +653,12 @@ print("================ 例外処理 ================")
 while True:
     try:    # breakするまで繰り返す
         # 入力
-        weight = float(input("体重(kg)は?"))
-        height = float(input("身長(cm)は?"))
+        #weight = float(input("体重(kg)は?"))
+        print("体重(kg)は?")
+        weight = float(123)
+        #height = float(input("身長(cm)は?"))
+        print("身長(cm)は?")
+        height = float(50)
         # BMIの計算
         height = height / 100 # m に直す
         bmi = weight / (height * height)
@@ -675,7 +679,9 @@ print("判定:", result)
 
 
 print("================ 特定のエラーだけを補足する ================")
-s = input("体重を入力: ")
+#s = input("体重を入力: ")
+print("体重を入力: ")
+s = 50
 try:
     v = 100 / float(s)
     print(v)
