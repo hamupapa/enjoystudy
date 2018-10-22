@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from syaku import syaku_to_cm
 
 print("10尺=", syaku_to_cm(10), "cm")
