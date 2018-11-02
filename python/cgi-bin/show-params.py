@@ -1,5 +1,8 @@
 #!/user/bin/env python3
 import cgi
+import cgitb   # デバッグ用
+
+cgitb.enable() # デバッグモードを有効にする
 
 # ヘッダの表示
 print("Content-Type: text/html; charset=utf-8")
