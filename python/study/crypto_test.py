@@ -4,7 +4,8 @@ import base64
 # 暗号化したいデータとパスワードを指定
 massage = "自分がして欲しいと思うことを人にもするように"
 password = "password"   # 適当なパスワードを指定
-iv = "L3f4mlTJtCIPV9af" # 初期ベクトル(16文字で適当な値を指定)
+#iv = "L3f4mlTJtCIPV9af" # 初期ベクトル(16文字で適当な値を指定)
+iv = "L3f4mlTJtCIPV9af".encode("utf-8") # 初期ベクトル(16文字で適当な値を指定)
 mode = AES.MODE_CBC     # 暗号化モードを指定
 
 # 特定の長さの倍数にするため空白でデータを埋める関数
