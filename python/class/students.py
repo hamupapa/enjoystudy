@@ -30,7 +30,7 @@ class CalcScore:
 		
 	def addStudent(self, student):
 		''' 学生を追加する '''
-		self.students.append(student):
+		self.students.append(student)
 	
 	def ave(self):
 		v = 0
