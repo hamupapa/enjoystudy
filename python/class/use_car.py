@@ -11,3 +11,4 @@ car2 = car.Camper("Jiro")
 car2.turn_right()
 car2.show_status()
 car2.make_ice()
+
