@@ -40,7 +40,7 @@ class Camper(Car):
     ''' キャンピングカーのクラス '''
     def __init__(self, owner):
         super().__init__(owner)
-        super.car_type = "camper"
+        self.car_type = "camper"
 
     def make_ice(self):
         ''' 氷を作る '''
