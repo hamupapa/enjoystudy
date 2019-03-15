@@ -15,6 +15,7 @@
 			<nav>ナビゲーションメニュー</nav>
 		</header>
 		<div>
+			<!-- HTML5の文書構造 -->
 			<main>
 				メインコンテンツ
 				<section>
@@ -22,7 +23,28 @@
 					<article>記事</article>
 					<article>記事</article>
 				</section>
+				
 			</main>
+			
+			<!-- HTML5の文字表現 -->
+			<p><mark>ハイライト</mark></p>
+			<p><abbr title="略語の説明">略語</abbr></p>
+			<p>
+				<ruby>
+					振り仮名<rt>ふりがな</rt>
+				</ruby>
+			</p>
+			<p>
+				<ruby>
+					<!-- rtタグ未サポートのブラウザの場合 -->
+					振り仮名<rp>(</rp><rt>ふりがな</rt><rp>)</rp>
+				</ruby>
+			</p>
+			<p>
+				<!-- 機械が読める形で日時を表現(こうしないと機械は数字の羅列と認識する) -->
+				日時：<time datetime="2019-03-15">2019/3/15</time>
+			</p>
+			
 			<aside>広告、著者プロフィール</aside>
 		</div>
 		<footer>フッター</footer>
