@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/* h1タグの装飾 */
+h1 {
+	color: red;
+}
+
+/* pタグの装飾 */
+p {
+	color: green;
+}
+
+/* IDがtitleの装飾 */
+#title {
+	color: gray;
+}
+
+/* classがtextの装飾(タグの定義と被っていたらそちらが優先される) */
+.text {
+	color: bule;
+}
+
+/* 属性セレクタの指定 */
+
