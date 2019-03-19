@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/* 「セレクタ」 ---> */
 /* h1タグの装飾 */
 h1 {
 	color: red;
@@ -15,10 +16,61 @@ p {
 	color: gray;
 }
 
-/* classがtextの装飾(タグの定義と被っていたらそちらが優先される) */
+/* classがtextの装飾 */
 .text {
 	color: bule;
 }
 
 /* 属性セレクタの指定 */
+[name=url] {
+	color: red;
+}
+
+/* ユニバーサルセレクタ(全ての要素) */
+* {
+	color: red;
+}
+
+/* 擬似クラスを指定(pタグにマウスｶｰソルがホバーしたとき) */
+p:hover {
+	color: blue;
+}
+
+/* 擬似クラスを指定(pタグをクリックしたとき) */
+p:active {
+	color: red;
+}
+
+/* 擬似要素を指定(h1タグの直前に*を追加) */
+h1::before {
+	content: "*";
+}
+
+/* 擬似要素を指定(h1タグの直後に*を追加) */
+h1::after {
+	content: "*";
+}
+/* <--- 「セレクタ」 */
+
+/* 「子孫セレクタ」---> */
+/* 子孫セレクタを指定 */
+div {
+	margin: 6px;
+	padding: 6px;
+}
+
+.parent {
+	background: #FFFF7F;
+}
+
+.child {
+	background: #FFE57D;
+}
+
+.parent .child {
+	background: #FF8C8C;
+}
+/* <---「子孫セレクタ」 */
+
+
 
