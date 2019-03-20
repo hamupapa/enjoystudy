@@ -72,5 +72,53 @@ div {
 }
 /* <---「子孫セレクタ」 */
 
+/* 「子要素セレクタ」---> */
+.parent2 {
+	background: #FFFF7F;
+}
+
+.child2 {
+	background: #FFE57D;
+}
+
+.parent2 > .child2 {
+	background: #FF8C8C;
+}
+/* <---「子要素セレクタ」 */
+
+/* 「隣接セレクタ」---> */
+.parent3 {
+	background: #FFFF7F;
+}
+
+.child3 {
+	background: #FFE57D;
+}
+
+.parent3 + .child3 {
+	background: #FF8C8C;
+}
+/* <---「隣接セレクタ」 */
+
+/* 「間接要素セレクタ」---> */
+.parent4 {
+	background: #FFFF7F;
+}
+
+.child4 {
+	background: #FFE57D;
+}
+
+.parent4 ~ .child4 {
+	background: #FF8C8C;
+}
+/* <---「間接要素セレクタ」 */
+
+/* 「複数のセレクタに同じスタイルを指定」---> */
+.box2 , .box3 {
+	background: #FF8C8C;
+}
+/* <---「複数のセレクタに同じスタイルを指定」 */
+
 
 
