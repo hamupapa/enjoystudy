@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-	background: #FFEEBC;
+	background: #FFEEBC;	/* 背景色 */
 }
 
 /*--------------------------
@@ -22,6 +22,37 @@ body {
 /*--------------------------
 フォントの装飾
 --------------------------*/
+.title {
+	font-size: 42px;		/* フォントサイズ */
+	font-family: Arial;		/* フォントの種類 */
+	font-weight: 100;		/* フォントの太さ */
+	text-decoration: underline;		/* 下線 */
+	text-align: center;		/* 水平方向の位置 */
+	background: #FFB682;	/* 背景色 */
+	color: #FFF;			/* 文字色 */
+}
+
+/*--------------------------
+枠線の装飾
+--------------------------*/
+.text2 {
+	padding: 10px;
+	border: 3px dotted #FFF;	/* 枠線 */
+	border-radius: 6px;			/* 枠線の角を丸くする */
+	background: url('03cssBasic02layout.png')	/* 背景画像 */
+}
+/*
+borderは以下のように分けて書くことも可能
+.text2 {
+	border-width: 3px;
+	border-style: dotted;
+	border-color: #FFF;
+}
+
+枠線の種類
+solid:実線
+dotted:点線
+*/
 
 
 
