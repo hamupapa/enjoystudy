@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+/*--------------------------
+アニメーション
+--------------------------*/
+.div1 {
+	border: 5px solid #333;		/* 枠線(太さ 線種 色) */
+	line-height: 290px;
+	height: 290px;
+	text-align: center;
+	animation: mover linear 1.0s infinite alternate;	/* アニメーション(定義名 変化の仕方 秒数 n回(infinite=ずっと) [alternte(=0%→100%→0%の変化)]) */
+	width: 290px;
+}
+
+@keyframes mover {
+	/* アニメーションのタイミングは0～100%で指定 */
+	0% {
+		background-color: #000;
+		border-radius: 0px;
+	}
+	
+	100% {
+		background-color: #FFF;
+		border-radius: 160px;
+	}
+
+}
+
+p {
+	color: #000;
+	font-size: 75px;
+	margin: 0;
+}
+
+
+
+

@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+/*--------------------------
+マウスオーバーによる横幅の滑らかな変化
+--------------------------*/
+.div1 {
+	background-color: #FFF;
+	border: 5px solid #333;		/* 枠線(太さ 線種 色) */
+	height: 50px;
+	text-align: center;
+	transition: width linear 0.5s;
+	width: 50px;
+}
+
+.div1:hover {
+	background-color: #66F;
+	height: 200px;
+	width: 200px;
+}
+
+/*--------------------------
+マウスオーバーによる縦幅の滑らかな変化
+--------------------------*/
+.div2 {
+	background-color: #FFF;
+	border: 5px solid #333;		/* 枠線(太さ 線種 色) */
+	height: 50px;
+	text-align: center;
+	transition: height linear 0.5s;
+	width: 50px;
+}
+
+.div2:hover {
+	background-color: #66F;
+	height: 200px;
+	width: 200px;
+}
+
+/*--------------------------
+マウスオーバーによる背景色の滑らかな変化
+--------------------------*/
+.div3 {
+	background-color: #FFF;
+	border: 5px solid #333;		/* 枠線(太さ 線種 色) */
+	height: 50px;
+	text-align: center;
+	transition: background-color linear 0.5s;
+	width: 50px;
+}
+
+.div3:hover {
+	background-color: #66F;
+	height: 200px;
+	width: 200px;
+}
+
+/*--------------------------
+マウスオーバーによる全ての属性の滑らかな変化
+--------------------------*/
+.div4 {
+	background-color: #FFF;
+	border: 5px solid #333;		/* 枠線(太さ 線種 色) */
+	height: 50px;
+	text-align: center;
+	transition: all linear 0.5s;
+	width: 50px;
+}
+
+.div4:hover {
+	background-color: #66F;
+	height: 200px;
+	width: 200px;
+}
+
+/*--------------------------
+変化のさせ方を変える
+--------------------------*/
+.div5 {
+	background-color: #FFF;
+	border: 5px solid #333;		/* 枠線(太さ 線種 色) */
+	height: 50px;
+	text-align: center;
+	transition: all ease 0.5s;
+	width: 50px;
+}
+/*
+transitionの変化の種類
+linear :速度は変わらない
+ease :ゆっくり始まりゆっくり終わる
+ease-in :ゆっくり始まる
+ease-out : ゆっくり終わる
+*/
+
+.div5:hover {
+	background-color: #66F;
+	height: 200px;
+	width: 200px;
+}
+
+p {
+	color: #000;
+	font-size: 15px;
+	margin: 0;
+}
+
+
+
+
