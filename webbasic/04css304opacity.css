@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+body {
+	background-color: #090;
+}
+
+/*--------------------------
+文字の透過
+--------------------------*/
+.div1 {
+	background-color: #CC0;
+	height: 300px;
+	line-height: 300px;
+	opacity: 1.0;			/* 透過率(0.0～1.0) */
+	text-align: center;
+	width: 300px;
+}
+
+.div2 {
+	background: rgba(207, 207, 0, 0.2);	/* 背景色と透過率 */
+	height: 300px;
+	line-height: 300px;
+	text-align: center;
+	width: 300px;
+}
+
+
+
+
+
+
+

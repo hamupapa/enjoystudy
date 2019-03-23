@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/*--------------------------
+グラデーション
+--------------------------*/
+.div1 {
+	background: linear-gradient(#F00, #300);
+	border: 3px solid #000;		/* 枠線(太さ 線種 色) */
+	border-radius: 500px;		/* 枠線を丸める */
+	height: 294px;
+	line-height: 300px;
+	overflow: hidden;			/* はみ出した部分を隠す */
+	text-align: center;
+	width: 294px;
+}
+
+.div2 {
+	background: radial-gradient(#00F, #003);
+	border: 3px solid #000;		/* 枠線(太さ 線種 色) */
+	border-radius: 500px;		/* 枠線を丸める */
+	height: 294px;
+	line-height: 300px;
+	overflow: hidden;			/* はみ出した部分を隠す */
+	text-align: center;
+	width: 294px;
+}
+
+p {
+	color: #FFF;
+	font-size: 20px;
+	margin: 0;
+}
+
+
+
+

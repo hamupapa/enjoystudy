@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+body {
+	background-color: #EEE;
+}
+
+/*--------------------------
+枠線
+--------------------------*/
+.div1 {
+	background-color: #FFF;
+	border: 3px solid #000;		/* 枠線(太さ 線種 色) */
+	border-radius: 500px;		/* 枠線を丸める */
+	box-shadow: 0 10px 10px #666;	/* 枠線に影をつける */
+	height: 294px;
+	overflow: hidden;			/* はみ出した部分を隠す */
+	text-align: center;
+	width: 294px;
+}
+
+p {
+	color: #000;
+	font-size: 20px;
+	margin: 0;
+}
+
+
+
+
