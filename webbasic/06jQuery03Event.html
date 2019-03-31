@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html　lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>Learning jQuery</title>
+		
+		<!-- 外部stylesheet -->
+		<link rel="stylesheet" type="text/css" href="">
+		
+		<!-- stylesheet -->
+		<style>
+		</style>
+		
+		<!-- 外部スクリプト -->
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="06jQuery03Event.js"></script>
+		
+		<!-- JavaScript -->
+		<script>
+		</script>
+	</head>
+	<body>
+		<!-- クリックされたら処理を行う -->
+		<h1>Learning jQuery</h1>
+		<div>
+			<input type="button" id="elem1" value="ID名elem1の要素">
+			<p>処理が実行された回数：<span id="result1">0</span></p>
+		</div>
+		
+		<!-- マウスカーソルが乗せられたら処理を行う -->
+		<div>
+			<p id="elem2">ID名elem2の要素(マウスカーソルが乗せられたら処理)</p>
+			<p>処理が実行された回数：<span id="result2">0</span></p>
+		</div>
+		
+		<!-- マウスカーソルが乗せられている間処理を行う -->
+		<div>
+			<p id="elem3">ID名elem3の要素(マウスカーソルが乗せられている間処理)</p>
+			<p>処理が実行された回数：<span id="result3">0</span></p>
+		</div>
+		
+		<!-- 選択されたら処理を行う -->
+		<div>
+			<p><input type="text" id="elem4">←ID名elem4の要素(選択されたら処理)</p>
+			<p>処理が実行された回数：<span id="result4">0</span></p>
+		</div>
+		
+		<!-- キー入力されたら処理を行う -->
+		<div>
+			<p><input type="text" id="elem5">←ID名elem5の要素(キー入力されたら処理)</p>
+			<p>処理が実行された回数：<span id="result5">0</span></p>
+		</div>
+	</body>
+</html>
+
