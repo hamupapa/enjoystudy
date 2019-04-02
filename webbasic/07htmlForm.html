@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html　lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>Learning HTML</title>
+		
+		<!-- 外部stylesheet -->
+		<link rel="stylesheet" type="text/css" href="07htmlForm.css">
+		
+		<!-- stylesheet -->
+		<style>
+		</style>
+		
+		<!-- 外部スクリプト -->
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="07htmlForm.js"></script>
+		
+		<!-- JavaScript -->
+		<script>
+		</script>
+	</head>
+	<body>
+		<div>
+			<form id="form1">
+				<label>メールアドレス
+					<input type="email" name="email">
+				</label>
+				<button type="submit">送信</button>
+			</form>
+			<hr />
+			<p>フォームの送信値は次の通りです。</p>
+			<ul class="result1">
+			</ul>
+		</div>
+		
+		<div>
+			<form id="form2">
+				<label>電話番号
+					<input type="tel" name="tel">
+				</label>
+				<button type="submit">送信</button>
+			</form>
+			<hr />
+			<p>フォームの送信値は次の通りです。</p>
+			<ul class="result2">
+			</ul>
+		</div>
+		
+		<div>
+			<form id="form3">
+				<label>URL
+					<input type="url" name="url">
+				</label>
+				<button type="submit">送信</button>
+			</form>
+			<hr />
+			<p>フォームの送信値は次の通りです。</p>
+			<ul class="result3">
+			</ul>
+		</div>
+		
+		<div>
+			<form id="form4">
+				<label>数値
+					<input type="number" name="number">
+				</label>
+				<button type="submit">送信</button>
+			</form>
+			<hr />
+			<p>フォームの送信値は次の通りです。</p>
+			<ul class="result4">
+			</ul>
+		</div>
+		
+		<div>
+			<form id="form5">
+				<label>カラーピッカー
+					<input type="color" name="color">
+				</label>
+				<button type="submit">送信</button>
+			</form>
+			<hr />
+			<p>フォームの送信値は次の通りです。</p>
+			<ul class="result5">
+			</ul>
+		</div>
+		
+		<div>
+			<form id="form6">
+				<label>日付
+					<input type="date" name="date">
+				</label>
+				<button type="submit">送信</button>
+			</form>
+			<hr />
+			<p>フォームの送信値は次の通りです。</p>
+			<ul class="result6">
+			</ul>
+		</div>
+		
+		<div>
+			<form id="form7">
+				<label>時間
+					<input type="time" name="time">
+				</label>
+				<button type="submit">送信</button>
+			</form>
+			<hr />
+			<p>フォームの送信値は次の通りです。</p>
+			<ul class="result7">
+			</ul>
+		</div>
+		
+		<div>
+			<form id="form8">
+				<label>日付時間
+					<input type="datetime-local" name="datetime">
+				</label>
+				<button type="submit">送信</button>
+			</form>
+			<hr />
+			<p>フォームの送信値は次の通りです。</p>
+			<ul class="result8">
+			</ul>
+		</div>
+		
+		<div>
+			<form id="form9">
+				<label>必須入力チェック
+					<input name="required" required>
+				</label>
+				<button type="submit">送信</button>
+			</form>
+			<hr />
+			<p>フォームの送信値は次の通りです。</p>
+			<ul class="result9">
+			</ul>
+		</div>
+		
+		<div>
+			<form id="form10">
+				<label>最小値/最大値チェック
+					<input type="number" name="max-min" min="5" max="10" value="11">
+				</label>
+				<button type="submit">送信</button>
+			</form>
+			<hr />
+			<p>フォームの送信値は次の通りです。</p>
+			<ul class="result10">
+			</ul>
+		</div>
+		
+		<div>
+			<form id="form11">
+				<label>文字数チェック
+					<input name="length" minlength="5" maxlength="10" value="1234">
+				</label>
+				<button type="submit">送信</button>
+			</form>
+			<hr />
+			<p>フォームの送信値は次の通りです。</p>
+			<ul class="result11">
+			</ul>
+		</div>
+		
+		<div>
+			<form id="form12">
+				<label>HTML5のみ有効
+					<input name="regexp" pattern="regexp" title="HTML5のみ有効" value="HTML4.1">
+				</label>
+				<button type="submit">送信</button>
+			</form>
+			<hr />
+			<p>フォームの送信値は次の通りです。</p>
+			<ul class="result12">
+			</ul>
+		</div>
+		
+		<div>
+			<form id="form13">
+				<label>先頭がaで始まる文字のみ有効
+					<input name="regexp" pattern="^a.*" title="先頭がaで始まる文字のみ有効" value="hello">
+				</label>
+				<button type="submit">送信</button>
+			</form>
+			<hr />
+			<p>フォームの送信値は次の通りです。</p>
+			<ul class="result13">
+			</ul>
+		</div>
+		
+		<div>
+			<form id="form14" novalidate>
+				<label>先頭がaで始まる文字のみ有効(入力チェック無効)
+					<input name="regexp" pattern="^a.*" title="先頭がaで始まる文字のみ有効" value="hello">
+				</label>
+				<button type="submit">送信</button>
+			</form>
+			<hr />
+			<p>フォームの送信値は次の通りです。</p>
+			<ul class="result14">
+			</ul>
+		</div>
+	</body>
+</html>
+
