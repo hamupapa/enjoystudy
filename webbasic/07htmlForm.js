@@ -204,7 +204,7 @@ $(function(){
 });
 
 $(function(){
-	// フォームが送信されたときに値を出力するサンプルです。（正規表現を使ったチェック/HTML5のみ有効）
+	// フォームが送信されたときに値を出力するサンプルです。（先頭がaで始まる文字のみ有効）
 	$("#form13").on("submit", function(e){
 		e.preventDefault();
 		
@@ -221,7 +221,7 @@ $(function(){
 });
 
 $(function(){
-	// フォームが送信されたときに値を出力するサンプルです。（正規表現を使ったチェック/HTML5のみ有効）
+	// フォームが送信されたときに値を出力するサンプルです。（先頭がaで始まる文字のみ有効(入力チェック無効)）
 	$("#form14").on("submit", function(e){
 		e.preventDefault();
 		
@@ -236,3 +236,164 @@ $(function(){
 	});
 
 });
+
+$(function(){
+	// フォームが送信されたときに値を出力するサンプルです。（名前の入力補助）
+	$("#form15").on("submit", function(e){
+		e.preventDefault();
+		
+		const keyValues = $(this).serialize();
+		const inputValues = keyValues.split("&").map((keyValue) => {
+			return $("<li>").text(decodeURIComponent(keyValue));
+		});
+		
+		$(".result15")
+			.children().remove().end()
+			.append(inputValues);
+	});
+
+});
+
+$(function(){
+	// フォームが送信されたときに値を出力するサンプルです。（メールアドレスの入力補助）
+	$("#form16").on("submit", function(e){
+		e.preventDefault();
+		
+		const keyValues = $(this).serialize();
+		const inputValues = keyValues.split("&").map((keyValue) => {
+			return $("<li>").text(decodeURIComponent(keyValue));
+		});
+		
+		$(".result16")
+			.children().remove().end()
+			.append(inputValues);
+	});
+
+});
+
+$(function(){
+	// フォームが送信されたときに値を出力するサンプルです。（電話番号の入力補助）
+	$("#form17").on("submit", function(e){
+		e.preventDefault();
+		
+		const keyValues = $(this).serialize();
+		const inputValues = keyValues.split("&").map((keyValue) => {
+			return $("<li>").text(decodeURIComponent(keyValue));
+		});
+		
+		$(".result17")
+			.children().remove().end()
+			.append(inputValues);
+	});
+
+});
+
+$(function(){
+	// フォームが送信されたときに値を出力するサンプルです。（郵便番号の入力補助）
+	$("#form18").on("submit", function(e){
+		e.preventDefault();
+		
+		const keyValues = $(this).serialize();
+		const inputValues = keyValues.split("&").map((keyValue) => {
+			return $("<li>").text(decodeURIComponent(keyValue));
+		});
+		
+		$(".result18")
+			.children().remove().end()
+			.append(inputValues);
+	});
+
+});
+
+$(function(){
+	// フォームが送信されたときに値を出力するサンプルです。（郵便番号の入力補助(無効)）
+	$("#form19").on("submit", function(e){
+		e.preventDefault();
+		
+		const keyValues = $(this).serialize();
+		const inputValues = keyValues.split("&").map((keyValue) => {
+			return $("<li>").text(decodeURIComponent(keyValue));
+		});
+		
+		$(".result19")
+			.children().remove().end()
+			.append(inputValues);
+	});
+
+});
+
+$(function(){
+	// フォームが送信されたときに値を出力するサンプルです。（読み取り専用）
+	$("#form20").on("submit", function(e){
+		e.preventDefault();
+		
+		const keyValues = $(this).serialize();
+		const inputValues = keyValues.split("&").map((keyValue) => {
+			return $("<li>").text(decodeURIComponent(keyValue));
+		});
+		
+		$(".result20")
+			.children().remove().end()
+			.append(inputValues);
+	});
+
+});
+
+$(function(){
+	// フォームが送信されたときに値を出力するサンプルです。（プレースホルダー）
+	$("#form21").on("submit", function(e){
+		e.preventDefault();
+		
+		const keyValues = $(this).serialize();
+		const inputValues = keyValues.split("&").map((keyValue) => {
+			return $("<li>").text(decodeURIComponent(keyValue));
+		});
+		
+		$(".result21")
+			.children().remove().end()
+			.append(inputValues);
+	});
+
+});
+
+$(function(){
+	// フォームが送信されたときに値を出力するサンプルです。（オートフォーカス）
+	$("#form22").on("submit", function(e){
+		e.preventDefault();
+		
+		const keyValues = $(this).serialize();
+		const inputValues = keyValues.split("&").map((keyValue) => {
+			return $("<li>").text(decodeURIComponent(keyValue));
+		});
+		
+		$(".result22")
+			.children().remove().end()
+			.append(inputValues);
+	});
+
+});
+
+$(function(){
+	// フォームが送信されたときに値を出力するサンプルです。（スペルチェック）
+	$("#form23").on("submit", function(e){
+		e.preventDefault();
+		
+		const keyValues = $(this).serialize();
+		const inputValues = keyValues.split("&").map((keyValue) => {
+			return $("<li>").text(decodeURIComponent(keyValue));
+		});
+		
+		$(".result23")
+			.children().remove().end()
+			.append(inputValues);
+	});
+
+});
+
+
+
+
+
+
+
+
