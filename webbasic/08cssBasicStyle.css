@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.box1 {
+	border: 3px solid #777;
+	padding: 20px;
+	margin: 20px;
+	height: 150px;
+	width: 150px;
+	box-sizing: border-box;		/* heightとwidthにpadding,widthを含まない */
+}
+
+.box2 {
+	border: 3px solid #777;
+	padding: 20px;
+	margin: 20px;
+	height: 150px;
+	width: 150px;
+	box-sizing: border-box;		/* heightとwidthにpadding,widthを含まない */
+}
+
