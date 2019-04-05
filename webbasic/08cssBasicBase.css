@@ -3,7 +3,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #FEF58B;
+	background-color: #FEFACC;
 }
 
 .box-wrapper {
@@ -12,11 +12,46 @@ body {
 	width: auto;
 }
 
+/* ボックスモデルを理解する */
 .box1 {
 	background-color: #FDADB6;
 }
 
+/* 様々なpaddingの指定方法を理解する(1) */
 .box2 {
+	height: 100px;
+	width: 100px;
+	background-color: #FDADB6;
+}
+
+/* 様々なpaddingの指定方法を理解する(2) */
+.box3 {
+	height: 100px;
+	width: 100px;
+	background-color: #FDADB6;
+}
+
+/* 様々なmarginの指定方法を理解する(1) */
+.box4 {
+	height: 100px;
+	width: 100px;
+	padding: 20px;
+	background-color: #FDADB6;
+}
+
+/* 様々なmarginの指定方法を理解する(2) */
+.box5 {
+	height: 100px;
+	width: 100px;
+	padding: 20px;
+	background-color: #FDADB6;
+}
+
+/* 様々なmarginの指定方法を理解する(3) */
+.box6 {
+	height: 100px;
+	width: 100px;
+	padding: 20px;
 	background-color: #FDADB6;
 }
 
