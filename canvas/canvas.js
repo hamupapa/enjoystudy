@@ -2,10 +2,10 @@
 
 window.onload = function() {
 	
-	var canvas = document.getElementById("sketchbook");
+	var canvas1 = document.getElementById("sketchbook1");
 	
-	if (canvas && canvas.getContext) {
-		var ctx = canvas.getContext("2d");
+	if (canvas1 && canvas1.getContext) {
+		var ctx = canvas1.getContext("2d");
 		ctx.fillStyle = "#00C";
 		ctx.fillRect(20, 20, 150, 80);
 		ctx.strokeRect(0, 0, 90, 125);
