@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        var ctx;
+        function init() {
+            var canvas = document.getElementById("canvas");
+            ctx = canvas.getContext("2d");
+            paint();
+        }
+        
+        function paint() {
+            ctx.fillStyle = "#009900";
+            ctx.fillRect(0, 0, 600, 300);
+
+            ctx.strokeStyle = "#FFFFFF";
+            ctx.lineWidth = 3;
+
+            ctx.beginPath();
+            ctx.moveTo(10, 10);
+            ctx.lineTo(590, 10);
+            ctx.lineTo(590, 290);
+            ctx.lineTo(10, 290);
+            ctx.closePath();
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(300, 10);
+            ctx.lineTo(300, 290);
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.arc(300, 150, 50, 0, 2*Math.PI);
+            ctx.closePath();
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.rect(10, 100, 50, 100);
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.rect(540, 100, 50, 100);
+            ctx.stroke();
+        }
+        </script>
+    </head>
+    <body onload="init()">
+        <canvas id="canvas" width="600" height="300"></canvas>
+    </body>
+</html>
