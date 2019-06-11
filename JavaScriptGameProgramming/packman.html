@@ -2,11 +2,12 @@
 <html>
     <head>
         <script>
-        var ctx, isOpen = true;
+        var ctx, x = 300, y = 300, isKeyDown, isOpen = true, rotate = 0;
         function init() {
             var canvas = document.getElementById("canvas");
             ctx = canvas.getContext("2d");
-            paint();
+            document.onkeydown = mykeydown;
+            document.onkeyup = mykeyup;
             setInterval(tick, 400);
         }
         
@@ -15,24 +16,54 @@
             paint();
         }
         
+        function mykeydown(e) {
+            switch (e.keyCode) {
+                case 37:
+                    rotate = Math.PI;
+                    x -= 1;
+                    break;  // left
+                case 38:
+                    rotate = -Math.PI/2;
+                    y -= 1;
+                    break;  // up
+                case 39:
+                    rotate = 0;
+                    x += 1;
+                    break;  // right
+                case 40:
+                    rotate = Math.PI/2;
+                    y += 1;
+                    break;  // down
+            }
+            isKeyDown = true;
+        }
+        
+        function mykeyup(e) {
+            isKeyDown = false;
+        }
+        
         function paint() {
             ctx.fillStyle = "#000000";
-            ctx.fillRect(0, 0, 200, 200);
+            ctx.fillRect(0, 0, 600, 600);
             
             ctx.fillStyle = "#FFFF00";
             ctx.beginPath();
-            ctx.moveTo(100, 100);
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.rotate(rotate);
+            ctx.moveTo(0, 0);
             if (isOpen) {
-                ctx.arc(100, 100, 30, -1*Math.PI/6, Math.PI/6, true);
+                ctx.arc(0, 0, 10, -1*Math.PI/6, Math.PI/6, true);
             } else {
-                ctx.arc(100, 100, 30, 0, 2*Math.PI);
+                ctx.arc(0, 0, 10, 0, 2*Math.PI);
             }
+            ctx.restore();
             ctx.closePath();
             ctx.fill();
         }
         </script>
     </head>
     <body onload="init()">
-        <canvas id="canvas" width="200" height="200"></canvas>
+        <canvas id="canvas" width="600" height="600"></canvas>
     </body>
 </html>
