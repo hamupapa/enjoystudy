@@ -2,12 +2,19 @@
 <html>
     <head>
         <script>
+        /*******************************************************
+         *  パックマンを矢印キーで上下左右に動かすプログラム
+         *******************************************************/
         var ctx, x = 300, y = 300, isKeyDown, isOpen = true, rotate = 0;
         function init() {
             var canvas = document.getElementById("canvas");
             ctx = canvas.getContext("2d");
-            document.onkeydown = mykeydown;
-            document.onkeyup = mykeyup;
+            // onkey~を使ったキーイベント待ち
+//            document.onkeydown = mykeydown;
+//            document.onkeyup = mykeyup;
+            // addEventListenerを使ったキーイベント待ち
+            window.addEventListener("keydown", mykeydown);
+            window.addEventListener("keyup", mykeyup);
             setInterval(tick, 400);
         }
         
@@ -17,24 +24,43 @@
         }
         
         function mykeydown(e) {
-            switch (e.keyCode) {
-                case 37:
+            // e.keyCodeよりe.keyが推奨されている?
+            switch (e.key) {
+                case "ArrowLeft":
                     rotate = Math.PI;
                     x -= 1;
                     break;  // left
-                case 38:
+                case "ArrowUp":
                     rotate = -Math.PI/2;
                     y -= 1;
                     break;  // up
-                case 39:
+                case "ArrowRight":
                     rotate = 0;
                     x += 1;
                     break;  // right
-                case 40:
+                case "ArrowDown":
                     rotate = Math.PI/2;
                     y += 1;
                     break;  // down
             }
+//            switch (e.keyCode) {
+//                case 37:
+//                    rotate = Math.PI;
+//                    x -= 1;
+//                    break;  // left
+//                case 38:
+//                    rotate = -Math.PI/2;
+//                    y -= 1;
+//                    break;  // up
+//                case 39:
+//                    rotate = 0;
+//                    x += 1;
+//                    break;  // right
+//                case 40:
+//                    rotate = Math.PI/2;
+//                    y += 1;
+//                    break;  // down
+//            }
             isKeyDown = true;
         }
         
