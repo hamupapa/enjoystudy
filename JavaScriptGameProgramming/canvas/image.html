@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        /*******************************************************
+         * 画像を描画する
+         *******************************************************/
+        var ctx;
+        function init() {
+            var canvas = document.getElementById("canvas");
+            ctx = canvas.getContext("2d");
+            
+            var arrow = document.getElementById("arrow");
+            ctx.drawImage(arrow, 10, 10);
+            ctx.drawImage(arrow, 10, 145, 100, 100);
+            ctx.drawImage(arrow, 10, 10, 150, 150, 260, 10, 200, 200);
+        }
+        </script>
+    </head>
+    <body onload="init()">
+        <canvas id="canvas" width="600" height="400"></canvas>
+        <!-- canvasで表示するため、img要素のdispay:none -->
+        <img id="arrow" src="image.jpg" style="display:none" />
+    </body>
+</html>
