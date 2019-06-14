@@ -2,25 +2,28 @@
 <html>
 	<head>
 		<script>
-			var timerId;
-			
-			function timeoutStart() {
-				timerId = setTimeout(whattime, 3000);
-			}
-			function timeoutStop() {
-				clearTimeout(timerId);
-			}
-			
-			function intervalStart() {
-				timerId = setInterval(whattime, 2000);
-			}
-			function intervalStop() {
-				clearInterval(timerId);
-			}
-			
-			function whattime() {
-				document.getElementById("info").textContent = new Date();
-			}
+        /*******************************************************
+         * タイマーを設定する
+         *******************************************************/
+		var timerId;
+		
+		function timeoutStart() {
+			timerId = setTimeout(whattime, 3000);
+		}
+		function timeoutStop() {
+			clearTimeout(timerId);
+		}
+		
+		function intervalStart() {
+			timerId = setInterval(whattime, 2000);
+		}
+		function intervalStop() {
+			clearInterval(timerId);
+		}
+		
+		function whattime() {
+			document.getElementById("info").textContent = new Date();
+		}
 		</script>
 	</head>
 	<body>

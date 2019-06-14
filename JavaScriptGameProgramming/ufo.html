@@ -2,16 +2,19 @@
 <html>
 	<head>
 		<style>
-			div {
-				position: absolute;
-				width: 90px;
-				height: 25px;
-				color: green;
-				background-color: red;
-				top: 50px;
-			}
+		div {
+			position: absolute;
+			width: 90px;
+			height: 25px;
+			color: green;
+			background-color: red;
+			top: 50px;
+		}
 		</style>
 		<script>
+        /*******************************************************
+         * UFOを左右キーで左右に動かす
+         *******************************************************/
 		var ufo;
 		function init() {
 			window.addEventListener("keydown", keydown);
