@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SnakeBite</title>
+        <meta charset="utf-8" />
+        <script type="text/javascript">
+        "use strict";
+        var W, H, S = 20;
+        var snake = [], foods = [];
+        var keyCode = 0;
+        var point = 0;
+        var timer = NaN;
+        var ctx;
+        
+        // Pintオブジェクト
+        function Point(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+        
+        // 初期化関数
+        function init() {
+            var canvas = document.getElementById('field');
+            W = canvas.width / S;
+            H = canvas.height / S;
+            ctx = canvas.getCotext('2d');
+            ctx.font = "20px sans-serif";
+            
+            // snakeの初期化
+            
+            // foodsの初期化
+        }
+        </script>
+    </head>
+    <body onload="init()">
+        <canvas id="field" width="400" height="400" style="background:#cccccc">
+        </canvas>
+    </body>
+</html>
