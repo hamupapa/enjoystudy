@@ -47,10 +47,9 @@
                 if(isHit(foods, x, y) || isHit(snake, x, y)) {
                     continue;
                 }
+                foods.push(new Point(x, y));
+                break;
             }
-
-            foods.push(new Point(x, y));
-            break;
         }
         
         // 衝突判定
