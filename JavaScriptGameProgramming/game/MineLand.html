@@ -14,7 +14,7 @@
         function init() {
             var main = document.getElementById("main");
             
-            // 枠の作成
+            // マスの作成
             for (var i=0; i<H; i++) {
                 cell[i] = [];
                 var tr = document.createElement("tr");
@@ -44,7 +44,7 @@
             }
         }
         
-        // セルの回りのBOMBの個数を返す
+        // セルの回りの地雷の個数を数える
         function count(x, y) {
             var b = 0;
             for (var j=y-1; j<=y+1; j++) {
@@ -58,11 +58,12 @@
             return b;
         }
         
+        // マスを開く
         function open(x, y) {
             for (var j=y-1; j<=y+1; j++) {
                 for (var i=x-1; i<=x+1; i++) {
                     if (cell[j] && cell[j][i]) {
-                        var c=cell[j][i];
+                        var c = cell[j][i];
                         if (c.opened || c.bomb) {
                             continue;
                         }
@@ -79,6 +80,7 @@
             }
         }
         
+        // マスを開く（後処理）
         function flip(cell) {
             cell.className = "cell open";
             cell.opened = true;
@@ -88,6 +90,7 @@
             }
         }
         
+        // マスをクリックしたときの処理
         function click(e) {
             var src = e.currentTarget;
             
