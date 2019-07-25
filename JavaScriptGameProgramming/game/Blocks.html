@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mine Land</title>
+        <meta charset="utf-8" />
+        <script type="text/javascript">
+        "use strict";
+        var ctx, paddle, ball, timer, blocks = [];
+        var balls = 3, score = 0; WIDTH = 600, HEIGHT = 600;
+        var colors = ['red', 'orange', 'yellow', 'green', 'purple', 'blue'];
+        
+        function Ball() {
+            this.x = 0;
+            this.y = HEIGHT + this.r;    // out of the area
+            this.dx = 0;
+            this.dy = 0;
+            this.r = 10;
+            this.dir = 0;
+            this.speed = 10;
+            
+            this.move = function () {
+                this.x += this.dx;
+                this.y += this.dy;
+            }
+            
+            this.changeDir = function(dir) {
+                this.dir = dir;
+                this.dx = this.speed * Math.cos(dir);
+                this.dy = -this.speed * Math.sin(dir);
+            }
+            
+            this.draw = function(ctx) {
+                drawBall(this.x, this.y, this.r);
+            }
+        }
+        
+        Block.prototype = Paddle.prototype = {
+            draw: function(ctx) {
+                ctx.fillStyle = this.color;
+                ctx.fillRect(this.x, this.y, this.w, this.h);
+            }
+        }
+        
+        function Block(x, y, i) {
+            this.x = x;
+            this.y = y;
+            this.w = 50;
+            this.h = 20;
+            this.color = colors[i];
+            this.point = (6 - i) * 10;
+        }
+        
+        function Paddle() {
+            this.w = 110;
+            this.h = 20;
+            this.x = (WIDTH - this.w) / 2;
+            this.y = HTEIGHT - 20;
+            this.color = 'yellow';
+            this.keyL = false;
+            this.keyR = false;
+        }
+        
+        function init() {
+            ctx = document.getElementById('canvas').getContext('2d');
+            ctx.font = "20pt Arial";
+            
+            // initialize event listener
+            window.addEventListener('keydown', function(e) {
+                toggleKey(e.keyCode, true);
+            }, true);
+            window.addEventListener('keyup', function(e) {
+                toggleKey(e.keyCode, false);
+            }, true);
+            
+            // initialize players
+            paddle = new Paddle();
+            ball = new Ball();
+            start();
+            
+            if (isNaN(timer)) {
+                timer = setInterval(mainLoop, 15);
+            }
+        }
+        
+        function toggleKey(code, flag) {
+            
+        }
+        </script>
+    </head>
+    <body onload="init()">
+        <h1 id="title">Mine Land</h1>
+        <table id="main" border="1"></table>
+    </body>
+</html>
