@@ -30,5 +30,13 @@
     {% else %}
       <p>False</p>
     {% endif %}
+    
+    <!-- GET/POSTで値を渡す -->
+    <form action="/test" method="get">
+      <button name="get_value" value="form get">get submit</button>
+    </form>
+    <form action="/test" method="post">
+      <button name="post_value" value="form post">post submit</button>
+    </form>
 	</body>
 </html>
