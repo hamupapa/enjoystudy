@@ -1,8 +1,8 @@
 // hello.js
-function test() {
+window.onload = function() {
   alert("Test");
   
-  var e = documnet.getElementById('test');
+  var e = document.getElementById('test');
   
-  e.style.color = 'blue';
-}
+  e.style.color = "#00f";
+};

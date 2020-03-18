@@ -1,14 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
 	<head>
 		<meta charset="UTF-8">
 		<title>HELLO</title>
+    <!-- CSS, JSファイルの読み込み -->
 		<link rel="stylesheet" href="{{url_for('static', filename='hello.css')}}">
 		<script src="{{url_for('static', filename='hello.js')}}"></script>
 	</head>
-	<body onload="test()">
+	<body>
     <p class="hello">Hello world!!</p>
-    <p>{{a}}</p>
-    <p id='test'>javascript</p>
+    <p id="test">Javascript</p>
+    
+    <!-- pythonからの変数の受け取り -->
+    <p>{{ s }}</p>
+    <hr>
+    
+    <ul>
+    {% for x in lis %}
+      <li>{{ x }}</li>
+    {% endfor %}
+    </ul>
+    <hr>
+    
+    <p>{{ "name: %s age: %s" % (dic["name"], dic["age"]) }}</p>
+    <hr>
+    
+    {% if bl %}
+      <p>True</p>
+    {% else %}
+      <p>False</p>
+    {% endif %}
 	</body>
 </html>
