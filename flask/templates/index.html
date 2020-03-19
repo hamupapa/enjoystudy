@@ -8,8 +8,8 @@
 		<script src="{{url_for('static', filename='hello.js')}}"></script>
 	</head>
 	<body>
-    <p class="hello">Hello world!!</p>
-    <p id="test">Javascript</p>
+    <p class="hello">CSSファイルの読み込み</p>
+    <p id="test">Javascriptの読み込み</p>
     
     <!-- GET/POSTで値を渡す -->
     <form action="/test" method="get">
@@ -18,6 +18,16 @@
     <form action="/test" method="post">
       <button name="post_value" value="form post">post submit</button>
     </form>
+    <hr>
+    
+    <!-- GET/POSTで値を渡す(渡し先で関数を分ける) -->
+    <form action="/test2" method="get">
+      <button name="get_value2" value="form get 2">get submit</button>
+    </form>
+    <form action="/test2" method="post">
+      <button name="post_value2" value="form post 2">post submit</button>
+    </form>
+    <hr>
     
     <!-- pythonからの変数の受け取り -->
     <p>{{ s }}</p>
