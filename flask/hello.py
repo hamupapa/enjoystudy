@@ -13,6 +13,7 @@ def hello():
   html = render_template('index.html', s=s, lis=lis, dic=dic, bl=bl)
   return html
 
+# GET/POSTで値を渡す(requestのimportが必要)
 @app.route('/test', methods=['GET', 'POST'])
 def test():
   if request.method == 'GET':

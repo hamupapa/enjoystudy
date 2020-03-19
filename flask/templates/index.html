@@ -11,6 +11,14 @@
     <p class="hello">Hello world!!</p>
     <p id="test">Javascript</p>
     
+    <!-- GET/POSTで値を渡す -->
+    <form action="/test" method="get">
+      <button name="get_value" value="form get">get submit</button>
+    </form>
+    <form action="/test" method="post">
+      <button name="post_value" value="form post">post submit</button>
+    </form>
+    
     <!-- pythonからの変数の受け取り -->
     <p>{{ s }}</p>
     <hr>
@@ -30,13 +38,5 @@
     {% else %}
       <p>False</p>
     {% endif %}
-    
-    <!-- GET/POSTで値を渡す -->
-    <form action="/test" method="get">
-      <button name="get_value" value="form get">get submit</button>
-    </form>
-    <form action="/test" method="post">
-      <button name="post_value" value="form post">post submit</button>
-    </form>
 	</body>
 </html>
